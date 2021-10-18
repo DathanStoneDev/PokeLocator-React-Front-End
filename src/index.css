@@ -24,3 +24,23 @@ li {
   text-decoration: none;
   
 }
+
+.pokemon {
+  max-width: 300px;
+  max-height: 600px;
+  margin: auto;
+  border-style: groove;
+  text-align: center;
+  
+}
+
+.pokemon-image {
+  border-style: groove;
+}
+
+.info {
+  border-style: groove;
+  color: blueviolet;
+}
+
+

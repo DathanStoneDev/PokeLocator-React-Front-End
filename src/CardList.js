@@ -6,9 +6,12 @@ const CardList = (props) => {
         {cards.map((card) =>(
             <div className="pokemon" key={card.pokeId}>
                 <div>
-                    <img src = {card.imageUrl} className="pokemon-image" alt="pokemon"></img> 
+                    <p>{card.pokeId}</p>
                 </div>
                 <div>
+                    <img src = {card.imageUrl} className="pokemon-image" alt="pokemon"></img> 
+                </div>
+                <div className="info">
                     <p>{card.pokeName}</p>
                     <p>{card.location}</p>
                 </div>      
@@ -19,6 +22,3 @@ const CardList = (props) => {
 }
  
 export default CardList;
-
-//className="image-wrapper"
-//className="location-info"
