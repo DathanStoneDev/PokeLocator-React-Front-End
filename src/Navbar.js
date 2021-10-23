@@ -1,3 +1,7 @@
+import { Link } from 'react-router-dom';
+
+
+
 
 
 const Navbar = ({handleUrl}) => {
@@ -11,24 +15,24 @@ const Navbar = ({handleUrl}) => {
     <nav id="navbar">
       <ul className="game-list">
         <li className="game-item">
-          <a onClick={() => handleUrl(xAndY)} href='!#'>
+          <Link onClick={() => handleUrl(xAndY)} to="/XandY">
             Pokemon X and Y
-          </a>
+          </Link>
         </li>
         <li className="game-item">
-          <a onClick={() => handleUrl(sunAndMoon)} href='!#'>
+          <Link onClick={() => handleUrl(sunAndMoon)} to="/SunAndMoon">
             Pokemon Ultra Sun and Moon
-          </a>
+          </Link>
         </li>
         <li className="game-item">
-          <a onClick={() => handleUrl(swordAndShield)} href='!#'>
+          <Link onClick={() => handleUrl(swordAndShield)} to="/SwordAndShield">
             Pokemon Sword and Shield
-          </a>
+          </Link>
         </li>
         <li className="game-item">
-          <a onClick={() => handleUrl(letsGo)} href='!#'>
+          <Link onClick={() => handleUrl(letsGo)} to="/LetsGo">
             Let's Go Eevve and Let's Go Pikachu
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

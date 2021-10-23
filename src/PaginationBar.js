@@ -11,7 +11,10 @@ const PaginationBar = ({pokemonPerPage, totalPokemon, paginate}) => {
             <ul>
                 {pageNumbers.map(number =>(
                     <li key={number}>
-                        <a onClick={()=> paginate(number)} href='!#'>
+                        <a onClick={(e)=> {
+                            paginate(number);
+                            e.preventDefault();
+                        }} href='!#'>
                             {number}
                         </a>
                     </li>

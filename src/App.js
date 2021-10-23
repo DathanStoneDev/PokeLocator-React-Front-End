@@ -1,8 +1,13 @@
 import Navbar from "./Navbar";
 import PaginationBar from "./PaginationBar";
 import CardList from "./CardList";
+import SunAndMoon from "./Components/GameLists/SunAndMoon";
+import LetsGo from "./Components/GameLists/LetsGo";
+import SwordAndShield from "./Components/GameLists/SwordAndShield";
+import XandY from "./Components/GameLists/XandY";
 import { useState } from "react";
 import useList from "./useListCustomHook";
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
 
@@ -12,22 +17,31 @@ function App() {
   const handleUrl = (url)=> setUrl(url);
   const {data: cards, totalPokemon: pokemon} = useList(url + "?page=" + currentPage + "&size="+ pokemonPerPage);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  //"http://localhost:8080/api/pokemon/ultra-sun-and-moon/list?page="
-
-
-  
 
   return (
-    <div className="container">
-      <Navbar handleUrl={handleUrl}/>
-      <div className ="poke-locations">
-            <div className="pagination-bar">
-                <PaginationBar pokemonPerPage={pokemonPerPage} totalPokemon={pokemon} paginate={paginate}/>
-            </div>
-            <CardList cards={cards}/>
-        </div>
-    </div>
+    <Router>
+      <div className="container">
+        <Navbar handleUrl={handleUrl}/>
+        <div className="content">
+          <Switch>
+            <Route exact path="/SunAndMoon">
+              <SunAndMoon pokemonPerPage={pokemonPerPage} pokemon={pokemon} paginate={paginate} cards={cards}/>
+            </Route>
+            <Route exact path="/LetsGo">
+              <LetsGo />
+            </Route>
+            <Route exact path="/SwordAndShield">
+              <SwordAndShield />
+            </Route>
+            <Route exact path="/XandY">
+              <XandY />
+            </Route>
+          </Switch>
+        </div>  
+      </div>
+    </Router>
   );
 }
+
 
 export default App;
