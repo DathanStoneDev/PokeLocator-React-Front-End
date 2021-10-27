@@ -1,10 +1,7 @@
 import Navbar from "./Navbar";
-import PaginationBar from "./PaginationBar";
-import CardList from "./CardList";
-import SunAndMoon from "./Components/GameLists/SunAndMoon";
-import LetsGo from "./Components/GameLists/LetsGo";
-import SwordAndShield from "./Components/GameLists/SwordAndShield";
-import XandY from "./Components/GameLists/XandY";
+import SunAndMoon from "./SunAndMoon";
+import LetsGo from "./LetsGo";
+import XandY from "./XandY";
 import { useState } from "react";
 import useList from "./useListCustomHook";
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -28,10 +25,7 @@ function App() {
               <SunAndMoon pokemonPerPage={pokemonPerPage} pokemon={pokemon} paginate={paginate} cards={cards}/>
             </Route>
             <Route exact path="/LetsGo">
-              <LetsGo />
-            </Route>
-            <Route exact path="/SwordAndShield">
-              <SwordAndShield />
+              <LetsGo pokemonPerPage={pokemonPerPage} pokemon={pokemon} paginate={paginate} cards={cards}/>
             </Route>
             <Route exact path="/XandY">
               <XandY />

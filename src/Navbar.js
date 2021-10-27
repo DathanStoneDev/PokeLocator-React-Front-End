@@ -9,7 +9,7 @@ const Navbar = ({handleUrl}) => {
   const sunAndMoon = 'http://localhost:8080/api/pokemon/ultra-sun-and-moon/list';
   const xAndY = '';
   const swordAndShield = '';
-  const letsGo = '';
+  const letsGo = 'http://localhost:8080/api/pokemon/lets-go/list';
 
   return (
     <nav id="navbar">

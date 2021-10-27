@@ -1,8 +1,8 @@
-import CardList from "../../CardList";
-import PaginationBar from "../../PaginationBar";
+import CardList from "./CardList";
+import PaginationBar from "./PaginationBar";
 
 
-const SunAndMoonList = ({pokemonPerPage, pokemon, paginate, cards}) => {
+const LetsGoList = ({pokemonPerPage, pokemon, paginate, cards}) => {
     return ( 
         <div>
            <PaginationBar pokemonPerPage={pokemonPerPage} totalPokemon={pokemon} paginate={paginate}/>
@@ -13,5 +13,5 @@ const SunAndMoonList = ({pokemonPerPage, pokemon, paginate, cards}) => {
 
      );
 }
- 
-export default SunAndMoonList;
+
+export default LetsGoList;
