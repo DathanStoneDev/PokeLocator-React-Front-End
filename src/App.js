@@ -17,7 +17,6 @@ function App() {
 
   return (
     <Router>
-      <div className="container">
         <Navbar handleUrl={handleUrl}/>
         <div className="content">
           <Switch>
@@ -31,8 +30,7 @@ function App() {
               <XandY />
             </Route>
           </Switch>
-        </div>  
-      </div>
+        </div> 
     </Router>
   );
 }

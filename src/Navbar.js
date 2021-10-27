@@ -12,8 +12,8 @@ const Navbar = ({handleUrl}) => {
   const letsGo = 'http://localhost:8080/api/pokemon/lets-go/list';
 
   return (
-    <nav id="navbar">
-      <ul className="game-list">
+      <nav className="flex w-screen justify-center pb-5">
+      <ul className="flex game-list space-x-6">
         <li className="game-item">
           <Link onClick={() => handleUrl(xAndY)} to="/XandY">
             Pokemon X and Y
@@ -36,6 +36,7 @@ const Navbar = ({handleUrl}) => {
         </li>
       </ul>
     </nav>
+  
   );
 };
 

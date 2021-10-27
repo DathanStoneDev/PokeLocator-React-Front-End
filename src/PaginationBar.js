@@ -7,8 +7,8 @@ const PaginationBar = ({pokemonPerPage, totalPokemon, paginate}) => {
     }
 
     return ( 
-        <nav>
-            <ul>
+        <nav className="flex justify-center pb-10">
+            <ul className="flex space-x-6">
                 {pageNumbers.map(number =>(
                     <li key={number}>
                         <a onClick={(e)=> {
