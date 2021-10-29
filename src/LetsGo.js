@@ -8,9 +8,6 @@ const LetsGoList = ({pokemonPerPage, pokemon, paginate, cards}) => {
            <PaginationBar pokemonPerPage={pokemonPerPage} totalPokemon={pokemon} paginate={paginate}/>
            <CardList cards={cards}/> 
         </div>
-
-
-
      );
 }
 

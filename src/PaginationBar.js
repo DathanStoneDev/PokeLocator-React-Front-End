@@ -8,9 +8,9 @@ const PaginationBar = ({pokemonPerPage, totalPokemon, paginate}) => {
 
     return ( 
         <nav className="flex justify-center pb-10">
-            <ul className="flex space-x-6">
+            <ul className="flex flex-wrap justify-center gap-4">
                 {pageNumbers.map(number =>(
-                    <li key={number}>
+                    <li className="rounded-lg p-1 shadow-md bg-white" key={number}>
                         <a onClick={(e)=> {
                             paginate(number);
                             e.preventDefault();

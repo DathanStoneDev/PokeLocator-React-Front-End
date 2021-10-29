@@ -5,6 +5,7 @@ import XandY from "./XandY";
 import { useState } from "react";
 import useList from "./useListCustomHook";
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Footer from "./Footer";
 
 function App() {
 
@@ -17,8 +18,8 @@ function App() {
 
   return (
     <Router>
+      <div className="bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 overflow-hidden font-Ubuntu">
         <Navbar handleUrl={handleUrl}/>
-        <div className="content">
           <Switch>
             <Route exact path="/SunAndMoon">
               <SunAndMoon pokemonPerPage={pokemonPerPage} pokemon={pokemon} paginate={paginate} cards={cards}/>
@@ -30,6 +31,7 @@ function App() {
               <XandY />
             </Route>
           </Switch>
+          <Footer />
         </div> 
     </Router>
   );
